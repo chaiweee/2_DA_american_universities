@@ -1,8 +1,10 @@
 # 2_DA_american_universities
 Attempt to do data cleaning and exploratory data analysis with Pandas, Numpy, Matplotlib and Seaborn on American Universities.  
-Reference blogpost: https://blog.jovian.com/what-makes-a-student-prefer-a-university-part-i-data-preparation-f581b699dcab
 
-Data source: https://blog.jovian.com/what-makes-a-student-prefer-a-university-a-brief-summary-ce3231aec390
+Reference blogpost: https://blog.jovian.com/what-makes-a-student-prefer-a-university-part-i-data-preparation-f581b699dcab  
+https://jovian.com/danycg85/student-perfere-a-university
+
+Data source: https://www.kaggle.com/datasets/sumithbhongale/american-university-data-ipeds-dataset
 Tools: Jupyter notebook
 
 ## Part I - Data Preperation
