@@ -189,7 +189,7 @@ Output:
 https://www.collegefactual.com/colleges/goddard-college/applying/entering-class-stats/*
 
 
-3. Giving format  
+### 3. Giving format  
 Now, in order to use the column names as properties and take advantage of it, it's necessary to remove some special characters that some column names contain, for example, apostrophe ', hyphen -, quotation marks ", colon :, and slash /. Also, some column names contain spaces between their words; these spaces will be removed as well.
 
 ```
@@ -249,4 +249,38 @@ universitiesnw_df.columns
 
 Output:  
 <img width="609" alt="Screenshot 2023-02-20 at 4 41 28 PM" src="https://user-images.githubusercontent.com/125619716/220055315-bb8179a1-963c-49ae-90fd-83fb889b2b5e.png">
+
+
+## Part II Exploratory Data Analysis (EDA) and Visualization. Quantitative and qualitative analysis (Asking and Answering Questions)
+```
+matplotlib.rcParams['figure.facecolor']='whitesmoke'
+```
+
+Let's begin this step by looking for information about each column.
+
+```
+from IPython.display import display
+with pd.option_context('display.max_columns',None):
+    display(universitiesnw_df.describe())
+```
+
+Output:  
+<img width="936" alt="Screenshot 2023-02-20 at 4 59 38 PM" src="https://user-images.githubusercontent.com/125619716/220059634-1be4a774-95f2-4f54-8edf-ca152b73f5b1.png">
+
+*It's interesting to see that in 2013 one university received around 72000 applications; whereas, another received only 4 applications in the same year. So, let's see which universities received the highest number of applications.*
+
+```
+high_app_df=universitiesnw_df[['name','applicants_total']].sort_values('applicants_total',ascending=False).head(20)
+```
+```
+plt.figure(figsize=(12,8))
+matplotlib.rcParams['font.size']=14
+sns.barplot(x='applicants_total',y='name',data=high_app_df)
+plt.title('Top 20 American Universities with the Most Applications in 2013')
+plt.xlabel('Number of applications')
+plt.ylabel('');
+```
+
+Output:  
+<img width="893" alt="Screenshot 2023-02-20 at 5 11 21 PM" src="https://user-images.githubusercontent.com/125619716/220062279-612f9d31-7ca4-4ec7-96f6-cbd56f08173e.png">
 
