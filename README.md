@@ -4,7 +4,7 @@ Attempt to do data cleaning and exploratory data analysis with Pandas, Numpy, Ma
 Reference blogpost: https://blog.jovian.com/what-makes-a-student-prefer-a-university-part-i-data-preparation-f581b699dcab  
 https://jovian.com/danycg85/student-perfere-a-university
 
-Data source: https://www.kaggle.com/datasets/sumithbhongale/american-university-data-ipeds-dataset
+Data source: https://www.kaggle.com/datasets/sumithbhongale/american-university-data-ipeds-dataset  
 Tools: Jupyter notebook
 
 ## Part I - Data Preperation
